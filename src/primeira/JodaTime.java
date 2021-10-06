@@ -4,24 +4,24 @@ import java.util.Locale;
 
 import org.joda.time.DateTime;
 
+import utilitarios.Utilitarios;
+
 public class JodaTime {
 	
 	public static void main(String[] args) {
 		
-		DateTime dateTime = new DateTime(2021,10,05,00,00,00);
+		DateTime data = new DateTime(2021,10,06,10,25,00);
 		
-		System.out.println("dateTime.toString() = " + dateTime.toString("dd-MM-YYYY"));
+		Utilitarios.formato1(data);
 		
-		System.out.println("dateTime.toString() = " + dateTime.toString("dd-MM-YYYY HH:mm:ss"));
-		//Apresenta o mês escrito
-		System.out.println("dateTime.toString() = " + dateTime.monthOfYear().getAsText());
+		Utilitarios.formato2(data);
 		
-		//Apresenta o mês abreviado
-		System.out.println("dateTime.toString() = " + dateTime.monthOfYear().getAsShortText());
+		Utilitarios.formato3(data);
 		
+		Utilitarios.formato4(data);
 		
-		//Apresenta o mês abreviado
-		System.out.println("dateTime.toString() = " + dateTime.monthOfYear().getAsText(Locale.US));
+		Utilitarios.formato5(data);
+		
 	}
 
 }
